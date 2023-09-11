@@ -2,7 +2,7 @@ require('dotenv').config()
 
 //_______________________ ┏  Main Setting  ┓ _______________________\\
 
-creator = 'ShirokamiRyzen' // Name
+creator = 'Cecile' // Name
 port = 8080 // Host port
 LimitApikey = 200 // Default Apikey Limit
 
@@ -18,7 +18,7 @@ servicesmtp = 'Gmail' // Available options: Gmail, Sendinblue. Gmail limit: 500,
 sendemail = process.env.sendemail // SMTP Email
 fromsendemail = process.env.fromsendemail // From Email for SMTP *If no custom email, it should be the same as SMTP Email
 sendpwmail = process.env.sendpwmail // Password for SMTP Email
-domain = 'api.ryzendesu.com' // Website domain without http or https
+domain = 'api.cecilee.site' // Website domain without http or https
 
 //_______________________ ┏  Apikey  ┓ _______________________\\
 
