@@ -1006,7 +1006,7 @@ router.get('/api/search/sfilemobi', cekKey, async (req, res, next) => {
 
 
 router.get('/api/randomgambar/couplepp', cekKey, async (req, res, next) => {
-	let resultt = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/kopel.json')
+	let resultt = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/kopel.json')
 	let random = resultt[Math.floor(Math.random() * resultt.length)]
 	limitapikey(req.query.apikey)
 	res.json({
@@ -1023,7 +1023,7 @@ router.get('/api/randomgambar/couplepp', cekKey, async (req, res, next) => {
 
 router.get('/api/randomgambar/dadu', cekKey, async (req, res, next) => {
 
-	let dadu = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/dadu.json')
+	let dadu = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/dadu.json')
 	let random = dadu[Math.floor(Math.random() * dadu.length)]
 	var result = await getBuffer(random.result)
 	limitapikey(req.query.apikey)
@@ -1042,7 +1042,7 @@ router.get('/api/randomgambar/coffee', cekKey, async (req, res, next) => {
 // Game
 
 router.get('/api/game/tembakgambar', cekKey, async (req, res, next) => {
- ryzen.tebakgambar().then((data) =>{ 
+ cecile.tebakgambar().then((data) =>{ 
 	limitapikey(req.query.apikey)	  
   res.json({
 	status: true,
@@ -1055,7 +1055,7 @@ router.get('/api/game/tembakgambar', cekKey, async (req, res, next) => {
 })
 
 router.get('/api/game/susunkata', cekKey, async (req, res, next) => {
-	let ra = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/susunkata.json')
+	let ra = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/susunkata.json')
 	let ha = ra[Math.floor(Math.random() * ra.length)]
 	limitapikey(req.query.apikey)
   res.json({
@@ -1067,7 +1067,7 @@ router.get('/api/game/susunkata', cekKey, async (req, res, next) => {
 })
 
 router.get('/api/game/tembakbendera', cekKey, async (req, res, next) => {
-	let ra = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/tebakbendera.json')
+	let ra = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/tebakbendera.json')
 	let ha = ra[Math.floor(Math.random() * ra.length)]
 	limitapikey(req.query.apikey)
   res.json({
@@ -1080,7 +1080,7 @@ router.get('/api/game/tembakbendera', cekKey, async (req, res, next) => {
 
 
 router.get('/api/game/tembakgame', cekKey, async (req, res, next) => {
-	let ra = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/tebakgame.json')
+	let ra = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/tebakgame.json')
 	let ha = ra[Math.floor(Math.random() * ra.length)]
 	limitapikey(req.query.apikey)
   res.json({
@@ -1091,7 +1091,7 @@ router.get('/api/game/tembakgame', cekKey, async (req, res, next) => {
 })
 
 router.get('/api/game/tembakkata', cekKey, async (req, res, next) => {
-	let ra = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/tebakkata.json')
+	let ra = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/tebakkata.json')
 	let ha = ra[Math.floor(Math.random() * ra.length)]
 	limitapikey(req.query.apikey)
   res.json({
@@ -1102,7 +1102,7 @@ router.get('/api/game/tembakkata', cekKey, async (req, res, next) => {
 })
 
 router.get('/api/game/tembaklirik', cekKey, async (req, res, next) => {
-	let ra = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/tebaklirik.json')
+	let ra = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/tebaklirik.json')
 	let ha = ra[Math.floor(Math.random() * ra.length)]
 	limitapikey(req.query.apikey)
   res.json({
@@ -1113,7 +1113,7 @@ router.get('/api/game/tembaklirik', cekKey, async (req, res, next) => {
 })
 
 router.get('/api/game/tembaklagu', cekKey, async (req, res, next) => {
-	let ra = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/tebaklagu.json')
+	let ra = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/tebaklagu.json')
 	let ha = ra[Math.floor(Math.random() * ra.length)]
 	limitapikey(req.query.apikey)
   res.json({
@@ -1123,7 +1123,7 @@ router.get('/api/game/tembaklagu', cekKey, async (req, res, next) => {
   })
 })
 router.get('/api/game/tembakkimia', cekKey, async (req, res, next) => {
-	let ra = await fetchJson('https://raw.githubusercontent.com/ryzenBot/data-rest-api/main/tebakkimia.json')
+	let ra = await fetchJson('https://raw.githubusercontent.com/cecileBot/data-rest-api/main/tebakkimia.json')
 	let ha = ra[Math.floor(Math.random() * ra.length)]
 	limitapikey(req.query.apikey)
   res.json({
@@ -1439,14 +1439,14 @@ router.get('/api/maker/welcome1', cekKey, async (req, res, next) => {
 	var imgpp = await isImageURL(pp)
 	var bgimg = await isImageURL(bg)
 
-    if (!name ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert name parameter"})  
-	if (!grup ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert gpname parameter"})  
-    if (!member ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert member parameter"})  
-	if (!pp ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert pp parameter"})  
-    if (!bg ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert bg parameter"})  
+    if (!name ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert name parameter"})  
+	if (!grup ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert gpname parameter"})  
+    if (!member ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert member parameter"})  
+	if (!pp ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert pp parameter"})  
+    if (!bg ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert bg parameter"})  
 
-	if ( !imgpp ) return res.json({ status : false, creator : 'Ryzen', message : "[!] check image url back pp"}) 
-	if ( !bgimg ) return res.json({ status : false, creator : 'Ryzen', message : "[!] check image url back bg"}) 
+	if ( !imgpp ) return res.json({ status : false, creator : 'Cecile', message : "[!] check image url back pp"}) 
+	if ( !bgimg ) return res.json({ status : false, creator : 'Cecile', message : "[!] check image url back bg"}) 
    
     Canvas.registerFont('./asset/font/Creme.ttf', { family: 'creme' })
 
@@ -1511,14 +1511,14 @@ router.get('/api/maker/goodbye1', cekKey, async (req, res, next) => {
 	var imgpp = await isImageURL(pp)
 	var bgimg = await isImageURL(bg)
 
-    if (!name ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert name parameter"})  
-	if (!grup ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert gpname parameter"})  
-    if (!member ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert member parameter"})  
-    if (!bg ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert bg parameter"})  
-	if (!pp) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert pp parameter"}) 
+    if (!name ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert name parameter"})  
+	if (!grup ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert gpname parameter"})  
+    if (!member ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert member parameter"})  
+    if (!bg ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert bg parameter"})  
+	if (!pp) return res.json({ status : false, creator : 'Cecile', message : "[!] insert pp parameter"}) 
    
-	if ( !imgpp ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert pp link parameter"}) 
-	if ( !bgimg ) return res.json({ status : false, creator : 'Ryzen', message : "[!] insert bg link parameter"}) 
+	if ( !imgpp ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert pp link parameter"}) 
+	if ( !bgimg ) return res.json({ status : false, creator : 'Cecile', message : "[!] insert bg link parameter"}) 
 
     Canvas.registerFont('./asset/font/Creme.ttf', { family: 'creme' })
 
